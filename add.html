@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}Add A New Cafe{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h1>Add a new cafe into the database</h1>
+
+      {{ render_form(form, novalidate=True) }}
+
+      <p>
+      <a
+      class="btn btn-warning btn-lg mt-3"
+      href="{{ url_for('cafes') }}">Add Cafés
+          </a>
+      </p>
+      <p>
+      <a
+      class="btn btn-warning btn-lg"
+      href="{{ url_for('home') }}">Home
+          </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
